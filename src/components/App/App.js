@@ -1,12 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Navigation from '../features/Navigation/Navigation';
-import { LANDING, HOME, CLASSES, SIGN_IN, SIGN_UP } from '../../constants/routes';
+import { LANDING, HOME, SCHEDULE, CLASSES, CLASS, TOPICS, SIGN_IN, SIGN_UP } from '../../constants/routes';
 import Landing from '../pages/Landing/Landing';
-import Home from '../pages/Home/Home';
+import HomePage from '../pages/HomePage/HomePage';
+import SchedulePage from '../pages/SchedulePage/SchedulePage';
 import ClassesPage from '../pages/ClassesPage/ClassesPage';
-import SignIn from '../pages/SignIn/SignIn';
-import SignUp from '../pages/SignUp/SignUp';
+import ClassPage from '../pages/ClassPage/ClassPage';
+import TopicsPage from '../pages/TopicsPage/TopicsPage';
+import SignInPage from '../pages/SignInPage/SignInPage';
+import SignUpPage from '../pages/SignUpPage/SignUpPage';
 
 const App = () => (
     <Router>
@@ -15,10 +19,13 @@ const App = () => (
         </div>
         <Switch>
             <Route path={LANDING} exact component={Landing} />
-            <Route path={HOME} exact component={Home} />
+            <Route path={HOME} exact component={HomePage} />
+            <Route path={SCHEDULE} exact component={SchedulePage} />
             <Route path={CLASSES} exact component={ClassesPage} />
-            <Route path={SIGN_IN} exact component={SignIn} />
-            <Route path={SIGN_UP} exact component={SignUp} />
+            <Route path={CLASS} exact component={ClassPage} />
+            <Route path={TOPICS} exact component={TopicsPage} />
+            <Route path={SIGN_IN} exact component={SignInPage} />
+            <Route path={SIGN_UP} exact component={SignUpPage} />
         </Switch>
     </Router>
 );

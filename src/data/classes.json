@@ -1,0 +1,26 @@
+[
+    {
+        "name": "1a",
+        "students": [
+            "Jan Kowalski",
+            "Zuzanna Nowak",
+            "Marcin Bieluk"
+        ]
+    },
+    {
+        "name": "2b",
+        "students": [
+            "Krzysztof Górski",
+            "Barbara Paluch",
+            "Anna Mikulska"
+        ]
+    },
+    {
+        "name": "3d",
+        "students": [
+            "Małgorzata Gryko",
+            "Kamil Wójcik",
+            "Bartosz Figurski"
+        ]
+    }
+]
