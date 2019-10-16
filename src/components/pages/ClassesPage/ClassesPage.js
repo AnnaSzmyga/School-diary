@@ -4,6 +4,13 @@ import { connect } from 'react-redux';
 import ClassesList from './../../features/ClassesList/ClassesList';
 
 class ClassesPage extends React.Component {
+    // state = {
+    //     singleClassName: ''
+    // }
+    // handleClick = (name) => {
+    //     console.log(name);
+    //     this.setState
+    // }
     render() {
         return(
             <div>

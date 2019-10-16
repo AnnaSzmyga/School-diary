@@ -1,9 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const ClassPage = () => (
-    <div>
-        <h1>ClassPage</h1>
-    </div>
-);
+import ClassLessonsList from '../../features/ClassLessonsList/ClassLessonsList';
+import { getLessonsByClass } from '../../../redux/actions/lessonsActions';
 
-export default ClassPage;
+const ClassPage = (props) => {
+
+    const singleClassName = props.match.params.class;
+    const lessons = props.getLessonsByClass(singleClassName);
+    console.log(lessons);
+    return (
+        <div>
+            <h1>Klasa {singleClassName}</h1>
+            <ClassLessonsList lessons={lessons} />
+        </div>
+    )
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getLessonsByClass: (name) => dispatch(getLessonsByClass(name))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ClassPage);
