@@ -1,13 +1,13 @@
 import React from 'react';
 import Class from './../Class/Class';
 
-const ClassesList = () => {
+const ClassesList = ({ classes }) => {
     return (
         <div>
             <ul>
-                <Class />
-                <Class />
-                <Class />
+                {
+                    classes.map(singleClass => <Class key={singleClass.name} singleClass={singleClass} />)
+                }
             </ul>
         </div>
     )

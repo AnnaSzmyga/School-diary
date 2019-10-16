@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Class = () => {
+const Class = ({singleClass}) => {
     return (
-        <li>2b</li>
+        <li>{singleClass.name}</li>
     )
 }
 

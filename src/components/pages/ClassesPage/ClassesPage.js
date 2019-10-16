@@ -1,11 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import ClassesList from './../../features/ClassesList/ClassesList';
 
-const ClassesPage = () => (
-    <div>
-        <h1>Lista klas</h1>
-        <ClassesList />
-    </div>
-);
+class ClassesPage extends React.Component {
+    render() {
+        return(
+            <div>
+                <h1>Lista klas</h1>
+                <ClassesList classes={this.props.classes} />
+            </div>
+        )
+    }
+}
 
-export default ClassesPage;
+const mapStateToProps = (state) => {
+    return {
+        classes: state.classes.classes
+    }
+}
+
+
+export default connect(mapStateToProps)(ClassesPage);

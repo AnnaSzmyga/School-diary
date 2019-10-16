@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "date": "02.03.2019",
+        "classes": ["1a"],
+        "topic": 2,
+        "frequency": ["Jan Kowalski", "Zuzanna Nowak"]
+    },
+    {
+        "id": 2,
+        "date": "12.05.2019",
+        "classes": ["1a", "2b"],
+        "topic": 1,
+        "frequency": ["Jan Kowalski", "Zuzanna Nowak", "Krzysztof Górski"]
+    },
+    {
+        "id": 3,
+        "date": "22.03.2019",
+        "classes": ["2b", "3d"],
+        "topic": 3,
+        "frequency": ["Krzysztof Górski", "Barbara Paluch", "Kamil Wójcik"]
+    }
+]

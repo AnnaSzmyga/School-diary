@@ -4,6 +4,7 @@ export const SCHEDULE = '/schedule';
 export const CLASSES = '/classes';
 export const CLASS = 'classes/:class';
 export const TOPICS = '/topics';
+export const ADD_TOPIC = '/add-topic';
 export const SIGN_UP = '/sign-up';
 export const SIGN_IN = '/sign-in';
 export const PASSWORD_FORGET = '/password-forget';
