@@ -1,7 +1,7 @@
-import topics from '../../data/topics.json';
+//import topics from '../../data/topics.json';
 import { ADD_TOPIC } from '../actions/topicsActions';
 
-const initialState = {topics};
+const initialState = {};
 
 const topicsReducer = (state = initialState, action) => {
     switch (action.type) {

@@ -6,7 +6,7 @@ const TopicsList = ({ topics }) => {
         <div>
             <ol className="topics-list">
                 {
-                    topics.map(topic => <Topic key={topic.id} topic={topic} />)
+                    topics.map(topic => <Topic key={topic.title} topic={topic} />)
                 }
             </ol>
         </div>
