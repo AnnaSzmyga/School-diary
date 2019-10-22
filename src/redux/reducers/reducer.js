@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-import { firestoreReducer } from 'redux-firestore'
+import { firebaseReducer } from 'react-redux-firebase';
+import { firestoreReducer } from 'redux-firestore';
 
 import classesReducer from './classesReducer';
 import topicsReducer from './topicsReducer';
@@ -9,7 +10,8 @@ const reducer = combineReducers({
     classes: classesReducer,
     topics: topicsReducer,
     lessons: lessonsReducer,
-    firestoreReducer: firestoreReducer
+    firebase: firebaseReducer,
+    firestore: firestoreReducer
 });
 
 export default reducer;

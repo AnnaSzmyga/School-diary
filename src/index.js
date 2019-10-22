@@ -6,12 +6,28 @@ import App from './components/App/App';
 import { Provider } from 'react-redux';
 import store from './redux/store.js';
 
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
+import { createFirestoreInstance } from 'redux-firestore';
+import firebase from './config/firebaseConfig';
+
 import * as serviceWorker from './serviceWorker';
+
+
+const rrfConfig = { userProfile: 'users' };
+
+const rrfProps = {
+    firebase,
+    config: rrfConfig,
+    dispatch: store.dispatch,
+    createFirestoreInstance
+}
 
 const Root = () => {
     return (
         <Provider store={store}>
-            <App />
+            <ReactReduxFirebaseProvider {...rrfProps}>
+                <App />
+            </ReactReduxFirebaseProvider>
         </Provider>
     )
 }
