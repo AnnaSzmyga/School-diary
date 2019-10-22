@@ -7,8 +7,9 @@ const lessonsReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_LESSONS_BY_CLASS:
             console.log('getLessonsByClass');
+        default:
+            return state;
     }
-    return state;
 }
 
 export default lessonsReducer;
